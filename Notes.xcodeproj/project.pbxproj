@@ -7,22 +7,32 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AA07CAD628B84B8C00A28E2F /* AddNoteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA07CAD528B84B8C00A28E2F /* AddNoteViewModel.swift */; };
+		AA07CAD828B84C2400A28E2F /* AddNoteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA07CAD728B84C2400A28E2F /* AddNoteModel.swift */; };
 		AA1DE9EB28A3388400202F69 /* NotesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1DE9EA28A3388400202F69 /* NotesApp.swift */; };
-		AA1DE9ED28A3388400202F69 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1DE9EC28A3388400202F69 /* ContentView.swift */; };
+		AA1DE9ED28A3388400202F69 /* ListaNotasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1DE9EC28A3388400202F69 /* ListaNotasView.swift */; };
 		AA1DE9EF28A3388500202F69 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA1DE9EE28A3388500202F69 /* Assets.xcassets */; };
 		AA1DE9F228A3388500202F69 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA1DE9F128A3388500202F69 /* Preview Assets.xcassets */; };
 		AA1DE9F428A3388500202F69 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1DE9F328A3388500202F69 /* Persistence.swift */; };
 		AA1DE9F728A3388500202F69 /* Notes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AA1DE9F528A3388500202F69 /* Notes.xcdatamodeld */; };
+		AA921B0928A4789600422BC6 /* ListaNotasModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA921B0628A4789600422BC6 /* ListaNotasModel.swift */; };
+		AA921B0A28A4789600422BC6 /* ListaNotasViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA921B0728A4789600422BC6 /* ListaNotasViewModel.swift */; };
+		AA921B0D28A4794000422BC6 /* AddNoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA921B0C28A4794000422BC6 /* AddNoteView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AA07CAD528B84B8C00A28E2F /* AddNoteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNoteViewModel.swift; sourceTree = "<group>"; };
+		AA07CAD728B84C2400A28E2F /* AddNoteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNoteModel.swift; sourceTree = "<group>"; };
 		AA1DE9E728A3388400202F69 /* Notes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Notes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA1DE9EA28A3388400202F69 /* NotesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesApp.swift; sourceTree = "<group>"; };
-		AA1DE9EC28A3388400202F69 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		AA1DE9EC28A3388400202F69 /* ListaNotasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaNotasView.swift; sourceTree = "<group>"; };
 		AA1DE9EE28A3388500202F69 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AA1DE9F128A3388500202F69 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		AA1DE9F328A3388500202F69 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		AA1DE9F628A3388500202F69 /* Notes.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Notes.xcdatamodel; sourceTree = "<group>"; };
+		AA921B0628A4789600422BC6 /* ListaNotasModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaNotasModel.swift; sourceTree = "<group>"; };
+		AA921B0728A4789600422BC6 /* ListaNotasViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaNotasViewModel.swift; sourceTree = "<group>"; };
+		AA921B0C28A4794000422BC6 /* AddNoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNoteView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,8 +65,9 @@
 		AA1DE9E928A3388400202F69 /* Notes */ = {
 			isa = PBXGroup;
 			children = (
+				AA921B0B28A4792600422BC6 /* AddNote */,
+				AA921B0428A46C2900422BC6 /* ListaNotas */,
 				AA1DE9EA28A3388400202F69 /* NotesApp.swift */,
-				AA1DE9EC28A3388400202F69 /* ContentView.swift */,
 				AA1DE9EE28A3388500202F69 /* Assets.xcassets */,
 				AA1DE9F328A3388500202F69 /* Persistence.swift */,
 				AA1DE9F528A3388500202F69 /* Notes.xcdatamodeld */,
@@ -71,6 +82,26 @@
 				AA1DE9F128A3388500202F69 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		AA921B0428A46C2900422BC6 /* ListaNotas */ = {
+			isa = PBXGroup;
+			children = (
+				AA921B0628A4789600422BC6 /* ListaNotasModel.swift */,
+				AA1DE9EC28A3388400202F69 /* ListaNotasView.swift */,
+				AA921B0728A4789600422BC6 /* ListaNotasViewModel.swift */,
+			);
+			path = ListaNotas;
+			sourceTree = "<group>";
+		};
+		AA921B0B28A4792600422BC6 /* AddNote */ = {
+			isa = PBXGroup;
+			children = (
+				AA07CAD728B84C2400A28E2F /* AddNoteModel.swift */,
+				AA921B0C28A4794000422BC6 /* AddNoteView.swift */,
+				AA07CAD528B84B8C00A28E2F /* AddNoteViewModel.swift */,
+			);
+			path = AddNote;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,10 +174,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA921B0A28A4789600422BC6 /* ListaNotasViewModel.swift in Sources */,
 				AA1DE9F428A3388500202F69 /* Persistence.swift in Sources */,
-				AA1DE9ED28A3388400202F69 /* ContentView.swift in Sources */,
+				AA1DE9ED28A3388400202F69 /* ListaNotasView.swift in Sources */,
+				AA07CAD828B84C2400A28E2F /* AddNoteModel.swift in Sources */,
 				AA1DE9EB28A3388400202F69 /* NotesApp.swift in Sources */,
+				AA07CAD628B84B8C00A28E2F /* AddNoteViewModel.swift in Sources */,
 				AA1DE9F728A3388500202F69 /* Notes.xcdatamodeld in Sources */,
+				AA921B0D28A4794000422BC6 /* AddNoteView.swift in Sources */,
+				AA921B0928A4789600422BC6 /* ListaNotasModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
