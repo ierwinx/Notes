@@ -4,7 +4,7 @@ struct AddNoteView: View {
     
     @Environment(\.managedObjectContext) private var viewContext
     @ObservedObject var objViewModel: ListaNotasViewModel
-    
+    @Binding var bShow: Bool
     
     var body: some View {
         VStack {
@@ -32,6 +32,7 @@ struct AddNoteView: View {
                 } else {
                     objViewModel.saveNote(viewContext: viewContext)
                 }
+                bShow.toggle()
             }
             .padding([.leading, .trailing], 50)
             .padding()
@@ -48,6 +49,6 @@ struct AddNoteView: View {
 
 struct AddNoteView_Previews: PreviewProvider {
     static var previews: some View {
-        AddNoteView(objViewModel: ListaNotasViewModel())
+        AddNoteView(objViewModel: ListaNotasViewModel(), bShow: .constant(false))
     }
 }

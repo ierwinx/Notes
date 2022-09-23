@@ -48,10 +48,12 @@ class ListaNotasViewModel: ObservableObject {
     }
     
     func setData(nota: Notas?) {
-        self.nota = nota
-        self.titulo = nota?.titulo ?? ""
-        self.descripcion = nota?.descripcion ?? ""
-        self.fecha = nota?.fecha ?? Date()
+        DispatchQueue.main.async {
+            self.nota = nota
+            self.titulo = nota?.titulo ?? ""
+            self.descripcion = nota?.descripcion ?? ""
+            self.fecha = nota?.fecha ?? Date()
+        }
     }
     
 }

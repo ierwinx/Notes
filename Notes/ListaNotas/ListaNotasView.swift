@@ -11,15 +11,19 @@ struct ListaNotasView: View {
     private var arrNotes: FetchedResults<Notas>
     
     @StateObject private var listaNotasViewModel = ListaNotasViewModel()
-    @State private var bLink = false
+    @State private var bLinkAdd = false
+    @State private var bLinkEdit = false
 
     var body: some View {
         NavigationView {
             List {
                 ForEach(arrNotes) { nota in
                     Button {
-                        listaNotasViewModel.bEdit = true
+                        DispatchQueue.main.async {
+                            listaNotasViewModel.bEdit = true
+                        }
                         listaNotasViewModel.setData(nota: nota)
+                        bLinkEdit = true
                     } label: {
                         HStack {
                             Text(nota.titulo ?? "")
@@ -29,7 +33,7 @@ struct ListaNotasView: View {
                         }
                     }
                     .background {
-                        NavigationLink("", destination: AddNoteView(objViewModel: listaNotasViewModel))
+                        NavigationLink("", destination: AddNoteView(objViewModel: listaNotasViewModel, bShow: $bLinkEdit), isActive: $bLinkEdit)
                     }
                     .swipeActions(edge: .trailing, allowsFullSwipe: false) {
                         
@@ -46,8 +50,8 @@ struct ListaNotasView: View {
                         Button {
                             listaNotasViewModel.bEdit = true
                             listaNotasViewModel.setData(nota: nota)
-                            bLink.toggle()
-                            NavigationLink("", destination: AddNoteView(objViewModel: listaNotasViewModel), isActive: $bLink)
+                            bLinkEdit = true
+                            NavigationLink("", destination: AddNoteView(objViewModel: listaNotasViewModel, bShow: $bLinkEdit), isActive: $bLinkEdit)
                         } label: {
                             Label {
                                 Text("Editar")
@@ -65,7 +69,7 @@ struct ListaNotasView: View {
                     Button {
                         listaNotasViewModel.bEdit = false
                         listaNotasViewModel.setData(nota: nil)
-                        bLink.toggle()
+                        bLinkAdd.toggle()
                     } label: {
                         HStack {
                             Label("Add Note", systemImage: "plus")
@@ -73,7 +77,7 @@ struct ListaNotasView: View {
                         }
                     }
                     .background(
-                        NavigationLink("", destination: AddNoteView(objViewModel: listaNotasViewModel), isActive: $bLink)
+                        NavigationLink("", destination: AddNoteView(objViewModel: listaNotasViewModel, bShow: $bLinkAdd), isActive: $bLinkAdd)
                     )
                 }
             }
